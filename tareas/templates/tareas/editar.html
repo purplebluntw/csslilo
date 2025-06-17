@@ -1,0 +1,11 @@
+<form method="POST" action="/tareas/{{ tarea.id }}/">
+    {% csrf_token %}
+    <label>
+        Título: <input name="titulo" value = "{{ tarea.titulo }}">
+    </label>
+    <label>
+        Completado: <input name="completado" type="checkbox" {% if tarea.completado %}checked{% endif %}>
+    </label>
+    <p></p>
+    <button type="submit">Guardar tarea</button>
+</form><form method="POST" action="{% url 'borrar' tarea.id %}">{% csrf_token %}<button type="submit">Borrar tarea</button></form>

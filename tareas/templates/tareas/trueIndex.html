@@ -1,0 +1,15 @@
+<h1>Bienvenido a tu manager de tareas</h1>
+<form method="POST" action="/">
+    {% csrf_token %}
+    <label>
+    Nombre de Usuario: <input type="text" name="nombre" required>
+    </label>
+    <p></p>
+    <label>
+    Contraseña: <input type="text" name="pass" required>
+    </label>
+    <p></p>
+    <button type="submit">Iniciar Sesión</button>
+    <p></p>
+    <button type="submit">Registrarse</button>
+</form>
