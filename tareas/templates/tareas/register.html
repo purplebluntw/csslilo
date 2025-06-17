@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rellene los campos para registrar su cuenta</h1>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+<form method="POST" action="/register/">
+    {% csrf_token %}
+    <label>
+    Nombre de Usuario: <input type="text" name="nombre" required>
+    </label>
+    <p></p>
+    <label>
+    Contraseña: <input type="text" name="pass" required>
+    </label>
+    <p></p>
+    <button type="submit">Registrarse</button>
+</form>
+<p></p>
+<a href="/"><button>Volver</button></a>
+</body>
+</html>
