@@ -1,15 +1,25 @@
-<h1>Bienvenido a tu manager de tareas</h1>
-<form method="POST" action="/">
-    {% csrf_token %}
-    <label>
-    Nombre de Usuario: <input type="text" name="nombre" required>
-    </label>
-    <p></p>
-    <label>
-    Contraseña: <input type="text" name="pass" required>
-    </label>
-    <p></p>
-    <button type="submit">Iniciar Sesión</button>
-    <p></p>
-</form>
-<a href="/register"><button>Registrarse</button></a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de Sesión</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tareas/estilos.css' %}">
+</head>
+<body>
+    <h1>Bienvenido a tu manager de tareas</h1>
+    <form method="POST" action="/">
+        {% csrf_token %}
+        <label>
+            Nombre de Usuario:
+            <input type="text" name="nombre" required>
+        </label>
+        <label>
+            Contraseña:
+            <input type="text" name="pass" required>
+        </label>
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+    <a href="/register"><button>Registrarse</button></a>
+</body>
+</html>

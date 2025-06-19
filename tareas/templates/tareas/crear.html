@@ -1,21 +1,21 @@
-
+{% extends 'tareas/base.html' %}
 
 {% block contenido %}
 <h1>Crea tu tarea</h1>
 <form method="POST" action="/tareas/crear/">
     {% csrf_token %}
     <label>
-    Título: <input type="text" name="titulo" required>
+        Título:
+        <input type="text" name="titulo" required>
     </label>
-    <p></p>
     <label>
-        Completada: <input name="completado" type="checkbox">
+        Completada:
+        <input name="completado" type="checkbox">
     </label>
-    <p></p>
     <label>
-    Importante: <input name="importante" type="checkbox">   
+        Importante:
+        <input name="importante" type="checkbox">
     </label>
-    <p></p>
     <button type="submit">Crear tarea</button>
 </form>
 {% endblock %}
