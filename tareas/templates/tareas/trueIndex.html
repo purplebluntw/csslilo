@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="{% static 'tareas/estilos.css' %}">
 </head>
 <body>
-    <h1>Bienvenido a tu manager de tareas</h1>
-    <form method="POST" action="/">
-        {% csrf_token %}
-        <label>
-            Nombre de Usuario:
-            <input type="text" name="nombre" required>
-        </label>
-        <label>
-            Contraseña:
-            <input type="text" name="pass" required>
-        </label>
-        <button type="submit">Iniciar Sesión</button>
-    </form>
-    <a href="/register"><button>Registrarse</button></a>
+    <div class="container">
+        <h1>Bienvenido a tu manager de tareas</h1>
+        <form method="POST" action="/">
+            {% csrf_token %}
+            <label>
+                Nombre de Usuario:
+                <input type="text" name="nombre" required>
+            </label>
+            <label>
+                Contraseña:
+                <input type="text" name="pass" required>
+            </label>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <a href="/register"><button>Registrarse</button></a>
+    </div>
+
+    <footer class="footer">
+        Realizado por Lilo y PurpleBlunt.
+    </footer>
 </body>
 </html>
